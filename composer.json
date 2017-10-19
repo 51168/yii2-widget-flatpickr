@@ -1,0 +1,31 @@
+{
+    "name": "lintion/yii2-widget-flatpickr",
+    "description": "easy and powerful datetime picker for yii2-widget-flatpickr.",
+    "keywords": ["yii2", "extension", "widget", "datetime picker", "plugin"],
+    "homepage": "https://github.com/",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "ishengge",
+            "email": "ishengge@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.5",
+        "bower-asset/flatpickr": ">=2.6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "lintion\\flatpickr\\": ""
+        }
+    },
+    "scripts": {
+		"post-install-cmd": [
+			"bower install flatpickr-calendar --save"
+		],
+		"post-update-cmd": [
+			"bower install flatpickr-calendar --save"
+		]
+	}
+}
