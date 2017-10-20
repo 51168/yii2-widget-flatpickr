@@ -28,6 +28,10 @@ class Flatpickr extends InputWidget
      */
     public $theme;
 
+    public $locale;
+
+    public $plugins;
+
     public $defaultConfigs = [
         'locale' => 'zh',
         'enableTime' => true,
@@ -50,7 +54,10 @@ flatpickr("#{$this->id}", $config);
 JS;
 
         $view = $this->getView();
-        FlatpickrAsset::register($view);
+        $asset = FlatpickrAsset::register($view);
+        $asset->theme = $this->theme;
+        $asset->locale = $this->locale;
+        $asset->plugins = $this->plugins;
         $view->registerJs($js);
     }
 
