@@ -13,5 +13,10 @@ Other installation methods, edit composer.json file `require` field add the foll
 
 ## Quick Start
 ```php
-
+<?= $form->field($model, 'create_at')->widget(lintion\flatpickr\Flatpickr::className(), [
+    'theme' => 'dark',
+    //'locale' => 'en',
+    'mode'=> 'range',
+    'enableTime' => false
+])?>
 ```
